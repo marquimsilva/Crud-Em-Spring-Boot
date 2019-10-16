@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+			xmlns:th="http://www.thymeleaf.org"
+		>
+    <head>
+      <title>Monitoria</title>
+    </head>
+    <body>
+    
+      <a href="/">Voltar</a>
+  <form action="/aluno" method="POST">
+     Numero: <input type="text" name="numero"><br>
+  
+    Nome:<input type="text" name="nome"><br>
+    
+    Dia: <input type="text" name="dia"><br>
+    
+  
+    
+   <input type="submit" value="Salvar">
+  </form>
+  
+   <h1>Lista De Alunos</h1>
+      
+      <table border="1px">
+         <tr>
+						<th>Número</th>
+						<th>Nome</th>
+						<th>Dia</th>
+						<th>Excluir</th>
+						<th>Editar</th>
+						
+		</tr>
+					
+			<tr th:each="c : ${Alunos}">
+						<td th:text="${c.numero}"></td>
+						<td th:text="${c.nome}"></td>
+						<td th:text="${c.dia}"></td>
+						<td><a th:href="@{/delete/{id}(id=${c.id})}">Excluir</a></td>
+						<td>Editar</td>
+					
+						
+						
+					
+						
+		     </tr>		
+      </table>
+  
+  
+  
+  
+    </body>
+</html>
