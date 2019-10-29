@@ -10,7 +10,7 @@
     </head>
     <body>
   
-      <a href="/alunos">Cadastrar Aluno</a>
+
   <form action="/monitores" method="POST">
    
   
@@ -38,7 +38,7 @@
 						<td th:text="${c.nome}"></td>
 						<td th:text="${c.dia}"></td>
 						<td><a th:href="@{/deletar/{id}(id=${c.id})}">Deletar</a></td>
-					    <td>Editar</td>
+					    <td><a th:href="@{/editar/{id}(id=${c.id})}" >Editar</a></td>
 					    
 		     </tr>		
       </table>

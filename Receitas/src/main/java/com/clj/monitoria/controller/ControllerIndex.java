@@ -37,6 +37,11 @@ public class ControllerIndex {
     	monitor.deleteById(id);
     	return "redirect:/";
      }
+    @GetMapping("/editar/{id}")
+    public String editar(@PathVariable("id") Long id,Model model) {
+    	model.addAttribute("dados" , monitor.findById(id));
+    	return "editar";
+     }
      
      
      

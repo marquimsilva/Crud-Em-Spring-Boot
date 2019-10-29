@@ -1,0 +1,16 @@
+<html>
+	<head><title>Editar</title></head>
+
+<body>
+<form th:object ="${dados}" method="POST" action="/monitores">
+<label>Codigo :</label>
+<input type="text" th:field="*{id}" readonly="readonly">
+<label>Nome :</label>
+<input type="text" th:field="*{nome}">
+<label>Dia :</label>
+<input type="text" th:field="*{dia}">
+	<input type="submit" value="editar">
+
+</form>
+</body>
+</html>
